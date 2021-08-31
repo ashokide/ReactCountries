@@ -1,22 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import { Button, Image } from 'antd';
+import { Button, Image } from "antd";
 
-const Country = props => {
-  // if (props.location.state != 0 || props.location.state == undefined) {
-  //   props.history.push('/');
-  // }
+const Country = (props) => {
+  if (props.location.state === undefined) {
+    props.history.push("/");
+  }
 
   return (
     <div>
       <p>Country : {props.match.params.country}</p>
       {console.log(props.location.state[0])}
-      <Image
-        width={10}
-        src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-      />
+      <Image width={100} src={props.location.state[0].flag} />
       <Button
-        variant="contained"
         color="primary"
         onClick={() => {
           props.history.goBack();
