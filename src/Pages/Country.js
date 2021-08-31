@@ -1,27 +1,25 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import { Button } from 'antd';
 
 const Country = props => {
-  if (props.location.state != 0 || props.location.state == undefined) {
-    props.history.push('/');
-  }
+  // if (props.location.state != 0 || props.location.state == undefined) {
+  //   props.history.push('/');
+  // }
 
   return (
     <div>
       <p>Country : {props.match.params.country}</p>
       {console.log(props.location.state[0])}
 
-      <button
+      <Button
+        variant="contained"
+        color="primary"
         onClick={() => {
           props.history.goBack();
         }}
       >
         Go Back
-      </button>
-
-      <Button variant="contained" color="primary">
-        Hello World
       </Button>
     </div>
   );

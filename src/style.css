@@ -2,14 +2,3 @@ h1,
 p {
   font-family: Lato;
 }
-.nav {
-  display: flex;
-  background-color: blueviolet;
-  margin: 0 auto;
-  justify-content: space-around;
-  text-decoration: none;
-}
-.nav p {
-  color: white;
-  text-decoration: none;
-}
